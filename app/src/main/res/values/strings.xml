@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MisContactos</string>
+    <string name="nombre">Alejandro Aguilar</string>
+    <string name="telefono">99998888</string>
+    <string name="email">alex@gmail.com</string>
+    <string name="pnombre">nombre</string>
+    <string name="ptelefono">telefono</string>
+    <string name="pemail">email</string>
+</resources>

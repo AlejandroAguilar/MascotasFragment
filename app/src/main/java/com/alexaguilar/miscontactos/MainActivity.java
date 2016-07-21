@@ -20,16 +20,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         contactos = new ArrayList<Contacto>();
 
-        contactos.add(new Contacto("Alejandro Aguilar","99998888","downvieri@gmail.com"));
-        contactos.add(new Contacto("Pedro Sanchez","22298888","pedro@gmail.com"));
-        contactos.add(new Contacto("Ana Perez","11198888","ana@gmail.com"));
-        contactos.add(new Contacto("Luis Cabrera","00098888","luis@gmail.com"));
+        contactos.add(new Contacto(R.drawable.user1,"Alejandro Aguilar","99998888","downvieri@gmail.com"));
+        contactos.add(new Contacto(R.drawable.user2,"Pedro Sanchez","22298888","pedro@gmail.com"));
+        contactos.add(new Contacto(R.drawable.user3,"Ana Perez","11198888","ana@gmail.com"));
+        contactos.add(new Contacto(R.drawable.user4,"Luis Cabrera","00098888","luis@gmail.com"));
 
         ArrayList<String> nombresContacto = new ArrayList<>();
         for (Contacto contacto: contactos) {
             nombresContacto.add(contacto.getNombre());
         }
 
+        /*
         ListView lstContactos = (ListView) findViewById(R.id.lstContactos);
         lstContactos.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, nombresContacto));
 
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+        */
 
     }
 }

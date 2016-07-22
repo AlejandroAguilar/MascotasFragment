@@ -2,15 +2,29 @@ package com.alexaguilar.miscontactos;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+//import android.widget.Toolbar;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
+
+/*
+import android.support.v7.widget.Toolbar;
+
+
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toolbar;
+*/
 
 import java.util.ArrayList;
 
@@ -24,8 +38,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Toolbar miActionBar = (Toolbar) findViewById(R.id.miActionBar);
-        //setSupportActionBar(miActionBar);
+        Toolbar miActionBar = (Toolbar) findViewById(R.id.miActionBar);
+        setSupportActionBar(miActionBar);
+
 
         listaContactos = (RecyclerView) findViewById(R.id.rvContactos);
 
@@ -37,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
         listaContactos.setLayoutManager(glm);
 
 
-
         inicializarListaContactos();
+        inicializarAdaptador();
 
 
         /*
@@ -47,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
             nombresContacto.add(contacto.getNombre());
         }
         */
+
 
         /*
         ListView lstContactos = (ListView) findViewById(R.id.lstContactos);

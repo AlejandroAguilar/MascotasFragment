@@ -28,7 +28,7 @@
             android:id="@+id/tvNombreCV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:tex"@string/pnombre"
+            android:text="@string/pnombre"
             android:textSize="@dimen/nombre_cardview"
             android:textStyle="bold"/>
 

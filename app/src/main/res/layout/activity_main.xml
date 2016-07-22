@@ -5,11 +5,10 @@
     android:layout_height="match_parent"
     tools:context="com.alexaguilar.miscontactos.MainActivity">
 
-    <!--
+    <!--  -->
     <include android:id="@+id/miActionBar"
         layout="@layout/actionbar"
         ></include>
--->
 
     <!--
     <ListView
@@ -23,11 +22,8 @@
         android:id="@+id/rvContactos"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
-        />
-
-
-
+        android:layout_below="@+id/miActionBar"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

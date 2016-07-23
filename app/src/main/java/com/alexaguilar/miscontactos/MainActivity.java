@@ -92,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
 
     // Nuevo
     /* */
-    //private RecyclerView rvContactos = (RecyclerView) findViewById(R.id.rvContactos);
     public ContactoAdaptador adaptador;
     private void inicializarAdaptador(){
         adaptador = new ContactoAdaptador(contactos, this);

@@ -1,6 +1,7 @@
 package com.alexaguilar.miscontactos;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,6 +59,13 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
             public void onClick(View view) {
 
                 Toast.makeText(activity, contacto.getNombre(),Toast.LENGTH_SHORT).show();
+
+                // Intent para Detalle contacto
+                Intent intent = new Intent(activity,DetalleContacto.class);
+                intent.putExtra("nombre", contacto.getNombre());
+                intent.putExtra("telefono", contacto.getTelefono());
+                intent.putExtra("email", contacto.getEmail());
+                activity.startActivity(intent);
 
             }
         });

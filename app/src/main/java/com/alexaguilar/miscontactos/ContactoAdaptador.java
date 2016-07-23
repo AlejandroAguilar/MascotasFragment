@@ -1,11 +1,13 @@
 package com.alexaguilar.miscontactos;
 
+import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -14,11 +16,24 @@ import java.util.ArrayList;
  */
 public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.ContactoViewHolder>{
 
+    /*
+    // antes
     ArrayList<Contacto> contactos;
 
     public ContactoAdaptador(ArrayList<Contacto> contactos){
         this.contactos = contactos;
     }
+    */
+
+    /* */
+    ArrayList<Contacto> contactos;
+    Activity activity;
+
+    public ContactoAdaptador(ArrayList<Contacto> contactos, Activity activity){
+        this.contactos = contactos;
+        this.activity = activity;
+    }
+
 
 
     // Inflar el layout y lo pasara al viewholder para que obtenga los views
@@ -31,12 +46,29 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
     // asocia cada elemento de la lista con cada view
     @Override
     public void onBindViewHolder(ContactoViewHolder contactoViewHolderholder, int position) {
-        Contacto contacto = contactos.get(position);
+        final Contacto contacto = contactos.get(position);
         contactoViewHolderholder.imgFoto.setImageResource(contacto.getFoto());
         contactoViewHolderholder.tvNombreCV.setText(contacto.getNombre());
         contactoViewHolderholder.tvTelenoCV.setText(contacto.getTelefono());
 
+        // On click
+        /* */
+        contactoViewHolderholder.imgFoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Toast.makeText(activity, contacto.getNombre(),Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
     }
+
+
+
+
+
 
     @Override
     public int getItemCount() {   // cantidad de elemenos que contiene mi lista

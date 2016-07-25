@@ -7,15 +7,23 @@ public class Contacto {
 
     private String nombre;
     private String telefono;
-    private String email;
     private int foto;
+    private int like;
 
-    public Contacto(int foto, String nombre, String telefono, String email) {
+    public Contacto(int foto, String nombre, int likes) {
         this.foto = foto;
         this.nombre = nombre;
-        this.telefono = telefono;
-        this.email = email;
+        this.like = likes;
     }
+
+    public int getLike() {
+        return like;
+    }
+
+    public void setLike(int like) {
+        this.like = like;
+    }
+
 
     public String getNombre() {
         return nombre;
@@ -31,14 +39,6 @@ public class Contacto {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public int getFoto() {

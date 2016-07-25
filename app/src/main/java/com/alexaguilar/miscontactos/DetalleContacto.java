@@ -16,6 +16,7 @@ public class DetalleContacto extends AppCompatActivity {
     private TextView tvNombre;
     private TextView tvTelefono;
     private TextView tvEmail;
+    private TextView tvLikes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,48 +26,23 @@ public class DetalleContacto extends AppCompatActivity {
         Bundle parametros = getIntent().getExtras();
 
         String nombre = parametros.getString(getResources().getString(R.string.pnombre)); // Nombre
-        String telefono = parametros.getString(getResources().getString(R.string.ptelefono)); // Telefono
-        String email = parametros.getString(getResources().getString(R.string.pemail)); // Email
+        //String telefono = parametros.getString(getResources().getString(R.string.likes)); // Likes
+        String likes = parametros.getString(getResources().getString(R.string.likes)); // Likes
 
         tvNombre = (TextView) findViewById(R.id.tvNombre);
-        tvTelefono = (TextView) findViewById(R.id.tvTelefono);
-        tvEmail = (TextView) findViewById(R.id.tvEmail);
+        //tvTelefono = (TextView) findViewById(R.id.tvTelefono);
+        tvLikes = (TextView) findViewById(R.id.tvLikes);
 
         tvNombre.setText(nombre);
-        tvTelefono.setText(telefono);
-        tvEmail.setText(email);
+        //tvTelefono.setText(telefono);
+        tvLikes.setText(likes);
 
-    }
-
-    public void llamar(View v) {
-        String telefono = tvTelefono.getText().toString();
-        // intent implicito
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + telefono)));
-    }
-
-    public void enviarMail(View v){
-        String email = tvEmail.getText().toString();
-        Intent emailIntent = new Intent((Intent.ACTION_SEND));
-        emailIntent.setData(Uri.parse("mailto: "));
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, email);
-        emailIntent.setType("message/rfc822");
-        startActivity(Intent.createChooser(emailIntent, "Email "));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-
 
         if( keyCode == KeyEvent.KEYCODE_BACK ){
             Intent intent = new Intent(DetalleContacto.this,MainActivity.class);

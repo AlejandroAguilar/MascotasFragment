@@ -3,7 +3,7 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cvContacto"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/activity_vertical_margin"
     card_view:cardCornerRadius="@dimen/corner_radius_cardview"
@@ -17,33 +17,59 @@
 
         <ImageView
             android:id="@+id/imgFoto"
-            android:layout_width="130dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/rayotrans"
+            android:src="@drawable/cute_dog"
             android:scaleType="centerCrop"
             android:layout_gravity="center_horizontal"
             />
 
-        <TextView
-            android:id="@+id/tvNombreCV"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/pnombre"
-            android:textSize="@dimen/nombre_cardview"
-            android:textStyle="bold"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/top"
+            >
 
-        <TextView
-            android:id="@+id/tvTelefonoCV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ptelefono"
-            />
+            <ImageButton
+                android:id="@+id/botonLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dog_bone_48"
+                />
 
+            <!--
+            <ImageView
+                android:id="@+id/imgvHueso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dog_bone_48"/>
+            -->
+
+            <TextView
+                android:id="@+id/tvNombreCV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pnombre"
+                android:textSize="@dimen/nombre_cardview"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvTelefonoCV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plikes"
+                android:layout_marginLeft="100dp"
+                />
+
+            <ImageView
+                android:id="@+id/imgvHueso2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dogbone"/>
+
+        </LinearLayout>
 
     </LinearLayout>
-
-
-
-
 
 </android.support.v7.widget.CardView>

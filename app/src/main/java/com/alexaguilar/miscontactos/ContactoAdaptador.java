@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,7 +37,6 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
     }
 
 
-
     // Inflar el layout y lo pasara al viewholder para que obtenga los views
     @Override
     public ContactoViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -50,7 +50,7 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
         final Contacto contacto = contactos.get(position);
         contactoViewHolderholder.imgFoto.setImageResource(contacto.getFoto());
         contactoViewHolderholder.tvNombreCV.setText(contacto.getNombre());
-        contactoViewHolderholder.tvTelenoCV.setText(contacto.getTelefono());
+        contactoViewHolderholder.tvTelenoCV.setText(contacto.getLike()+"");
 
         // On click
         /* */
@@ -58,25 +58,29 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(activity, contacto.getNombre(),Toast.LENGTH_SHORT).show();
+                // mensaje en pantalla
+                //Toast.makeText(activity, contacto.getNombre(),Toast.LENGTH_SHORT).show();
 
                 // Intent para Detalle contacto
                 Intent intent = new Intent(activity,DetalleContacto.class);
                 intent.putExtra("nombre", contacto.getNombre());
-                intent.putExtra("telefono", contacto.getTelefono());
-                intent.putExtra("email", contacto.getEmail());
+                intent.putExtra("likes", contacto.getLike());
                 activity.startActivity(intent);
 
             }
         });
 
+        contactoViewHolderholder.imgBoton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+
+                Toast.makeText(activity,"Like en "+contacto.getNombre(),Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
-
-
-
-
-
 
     @Override
     public int getItemCount() {   // cantidad de elemenos que contiene mi lista
@@ -88,6 +92,7 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
         private ImageView imgFoto;
         private TextView tvNombreCV;
         private TextView tvTelenoCV;
+        private ImageButton imgBoton;
 
         public ContactoViewHolder(View itemView) {
             super(itemView);
@@ -95,6 +100,7 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
             imgFoto = (ImageView) itemView.findViewById(R.id.imgFoto);
             tvNombreCV = (TextView) itemView.findViewById(R.id.tvNombreCV);
             tvTelenoCV = (TextView) itemView.findViewById(R.id.tvTelefonoCV);
+            imgBoton = (ImageButton) itemView.findViewById(R.id.botonLike);
 
         }
     }

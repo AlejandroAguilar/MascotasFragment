@@ -38,9 +38,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /*
         Toolbar miActionBar = (Toolbar) findViewById(R.id.miActionBar);
         setSupportActionBar(miActionBar);
-
+        */
 
         listaContactos = (RecyclerView) findViewById(R.id.rvContactos);
 
@@ -51,64 +52,28 @@ public class MainActivity extends AppCompatActivity {
         ///GridLayoutManager glm = new GridLayoutManager(this, 2);
         ///listaContactos.setLayoutManager(glm);
 
-
         inicializarListaContactos();
         inicializarAdaptador();
 
-
-        /*
-        ArrayList<String> nombresContacto = new ArrayList<>();
-        for (Contacto contacto: contactos) {
-            nombresContacto.add(contacto.getNombre());
-        }
-        */
-
-
-        /*
-        ListView lstContactos = (ListView) findViewById(R.id.lstContactos);
-        lstContactos.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, nombresContacto));
-
-        lstContactos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-                Intent intent = new Intent(MainActivity.this, DetalleContacto.class);
-                intent.putExtra(getResources().getString(R.string.pnombre),contactos.get(position).getNombre());
-                intent.putExtra(getResources().getString(R.string.ptelefono),contactos.get(position).getTelefono());
-                intent.putExtra(getResources().getString(R.string.pemail),contactos.get(position).getEmail());
-                startActivity(intent);
-                finish();
-            }
-        });
-        */
-
     }
 
-    /* antes
-    public void inicializarAdaptador(){
-        ContactoAdaptador adaptador = new ContactoAdaptador(contactos);
-        listaContactos.setAdapter(adaptador);
-    }*/
 
-
-    // Nuevo
-    /* */
+    // Manda los datos al adaptador
     public ContactoAdaptador adaptador;
     private void inicializarAdaptador(){
         adaptador = new ContactoAdaptador(contactos, this);
         listaContactos.setAdapter(adaptador);
     }
 
-    // Nuevo
-
-
-
+    // Llena los datos
     public void inicializarListaContactos(){
         contactos = new ArrayList<Contacto>();
 
-        contactos.add(new Contacto(R.drawable.user1,"Alejandro Aguilar","99998888","downvieri@gmail.com"));
-        contactos.add(new Contacto(R.drawable.user2,"Pedro Sanchez","22298888","pedro@gmail.com"));
-        contactos.add(new Contacto(R.drawable.user3,"Ana Perez","11198888","ana@gmail.com"));
-        contactos.add(new Contacto(R.drawable.user4,"Luis Cabrera","00098888","luis@gmail.com"));
+        contactos.add(new Contacto(R.drawable.cute_dog,"Lazzy",0));
+        contactos.add(new Contacto(R.drawable.chi,"Perro policia",0));
+        contactos.add(new Contacto(R.drawable.negro,"Guia",0));
+        contactos.add(new Contacto(R.drawable.labrador,"Galgo",0));
+        contactos.add(new Contacto(R.drawable.perfil,"Compañia",0));
     }
 
 }

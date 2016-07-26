@@ -1,6 +1,7 @@
 package com.alexaguilar.miscontactos;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -43,6 +44,19 @@ public class MainActivity extends AppCompatActivity {
         Toolbar miActionBar = (Toolbar) findViewById(R.id.miActionBar);
         setSupportActionBar(miActionBar);
         */
+
+        /* */
+        Toolbar miActionBar = (Toolbar) findViewById(R.id.miActionBar);
+        setSupportActionBar(miActionBar);
+        //muestro el logo
+        getSupportActionBar().setLogo(R.drawable.huella);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
+        //final ActionBar ab = getSupportActionBar();
+        //ab.setDisplayShowHomeEnabled(true);
+
+
+
 
         listaContactos = (RecyclerView) findViewById(R.id.rvContactos);
 

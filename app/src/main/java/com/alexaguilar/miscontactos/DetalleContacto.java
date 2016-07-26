@@ -37,7 +37,7 @@ public class DetalleContacto extends AppCompatActivity {
         //tvTelefono.setText(telefono);
         tvLikes.setText(likes);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 

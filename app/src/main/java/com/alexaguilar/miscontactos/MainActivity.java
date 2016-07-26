@@ -15,6 +15,7 @@ import android.widget.ListView;
 //import android.widget.Toolbar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
 
 /*
 import android.support.v7.widget.Toolbar;
@@ -70,10 +71,16 @@ public class MainActivity extends AppCompatActivity {
         contactos = new ArrayList<Contacto>();
 
         contactos.add(new Contacto(R.drawable.cute_dog,"Lazzy",0));
-        contactos.add(new Contacto(R.drawable.chi,"Perro policia",0));
+        contactos.add(new Contacto(R.drawable.chi,"Perro policia",1));
         contactos.add(new Contacto(R.drawable.negro,"Guia",0));
-        contactos.add(new Contacto(R.drawable.labrador,"Galgo",0));
-        contactos.add(new Contacto(R.drawable.perfil,"Compañia",0));
+        contactos.add(new Contacto(R.drawable.labrador,"Galgo",2));
+        contactos.add(new Contacto(R.drawable.perfil, "Compañia", 0));
+        contactos.add(new Contacto(R.drawable.perro, "Cobrador", 2));
+    }
+
+    public void fabClicked(View v){
+        // write your code here ..
+        Toast.makeText(this, "Subir", Toast.LENGTH_SHORT).show();
     }
 
 }

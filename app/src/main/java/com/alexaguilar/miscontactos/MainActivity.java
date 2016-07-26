@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setLogo(R.drawable.huella);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
-        //final ActionBar ab = getSupportActionBar();
-        //ab.setDisplayShowHomeEnabled(true);
+        final ActionBar ab = getSupportActionBar();
+        ab.setDisplayShowHomeEnabled(true);
 
 
 

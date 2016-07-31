@@ -5,17 +5,20 @@
     <string name="pnombre">nombre</string>
     <string name="likes">likes</string>
     <string name="plikes">0</string>
-    
+
     <!-- Datos -->
     <string name="alex">Jose Alejandro Aguilar Fortiz</string>
     <string name="estado">Puebla, Mexico</string>
     <string name="estudios">Ciencias de la computación</string>
-    
+
     <!-- Contacto -->
     <string name="contacto">Contacto</string>
     <string name="nombreCont">Nombre</string>
     <string name="correoCont">Correo</string>
     <string name="mensajeCont">Mensaje</string>
     <string name="botonEnviar">Enviar</string>
-    
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

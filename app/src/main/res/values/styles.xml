@@ -13,4 +13,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <style name="MiBotonRaised" parent="Theme.AppCompat.Light">
+        <item name="colorButtonNormal">@color/colorPrimaryDark</item>
+        <!-- el color que hace el efecto sera blanco -->
+        <item name="colorControlHighlight">@color/textColorPrimary</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
 </resources>

@@ -86,11 +86,11 @@ public class MainActivity extends AppCompatActivity {
     public void inicializarListaContactos(){
         contactos = new ArrayList<Contacto>();
 
-        contactos.add(new Contacto(R.drawable.cute_dog,"Lazzy",0));
+        contactos.add(new Contacto(R.drawable.cute_dog,"Lazzy",2));
         contactos.add(new Contacto(R.drawable.chi,"Perro policia",1));
-        contactos.add(new Contacto(R.drawable.negro,"Guia",0));
+        contactos.add(new Contacto(R.drawable.negro,"Guia",1));
         contactos.add(new Contacto(R.drawable.labrador,"Galgo",2));
-        contactos.add(new Contacto(R.drawable.perfil, "Compañia", 0));
+        contactos.add(new Contacto(R.drawable.perfil, "Compañia", 3));
         contactos.add(new Contacto(R.drawable.perro, "Cobrador", 2));
     }
 
@@ -112,9 +112,19 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent=new Intent(this, FavoritosActivity.class);
                 this.startActivity(intent);
                 return true;
+
             case R.id.action_about:
-                Toast.makeText(this,"Thank you",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this,"Acerca de ",Toast.LENGTH_SHORT).show();
+                Intent intentAbout =new Intent(this, AboutActivity.class);
+                this.startActivity(intentAbout);
                 return true;
+
+            case R.id.action_contacto:
+                //Toast.makeText(this,"Contacto",Toast.LENGTH_SHORT).show();
+                Intent intentContacto =new Intent(this, ContactoActivity.class);
+                this.startActivity(intentContacto);
+                return true;
+
         }
         return super.onOptionsItemSelected(item);
     }

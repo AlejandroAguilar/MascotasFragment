@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.alexaguilar.miscontactos.AboutActivity">
+
+
+    <include android:id="@+id/miActionBar"
+        layout="@layout/actionbar"
+        >
+    </include>
+
+    <TextView
+        android:id="@+id/tvMiNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/alex"
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/miActionBar"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/estudios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/estudios"
+        android:layout_below="@+id/tvMiNombre"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="63dp" />
+
+    <TextView
+        android:id="@+id/lugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/estado"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

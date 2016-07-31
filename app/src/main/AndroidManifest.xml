@@ -35,9 +35,24 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:parentActivityName=".MainActivity">
 
+            <!-- sopote para versions anteriores -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
 
+        <activity android:name=".ContactoActivity"
+            android:parentActivityName=".MainActivity">
 
+            <!-- sopote para versions anteriores -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
 
 </manifest>

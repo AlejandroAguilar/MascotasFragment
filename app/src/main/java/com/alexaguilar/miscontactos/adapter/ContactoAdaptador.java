@@ -1,4 +1,4 @@
-package com.alexaguilar.miscontactos;
+package com.alexaguilar.miscontactos.adapter;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,6 +10,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.alexaguilar.miscontactos.pojo.Contacto;
+import com.alexaguilar.miscontactos.DetalleContacto;
+import com.alexaguilar.miscontactos.R;
 
 import java.util.ArrayList;
 

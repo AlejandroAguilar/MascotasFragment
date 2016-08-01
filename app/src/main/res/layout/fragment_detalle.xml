@@ -2,12 +2,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.alexaguilar.miscontactos.DetalleFragment">
+    tools:context=".fragment.DetalleFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <!--
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/hello_blank_fragment" />
+        -->
+
+    <ImageView
+        android:id="@+id/ivImagenPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:src="@drawable/cute_dog"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvPerritos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ivImagenPerfil"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"/>
+
 
 </FrameLayout>

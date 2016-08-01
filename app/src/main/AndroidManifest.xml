@@ -44,8 +44,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
-        <activity android:name=".ContactoActivity"
+        <activity
+            android:name=".ContactoActivity"
             android:parentActivityName=".MainActivity">
 
             <!-- sopote para versions anteriores -->
@@ -53,6 +53,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+        <activity android:name=".PerfilActivity" />
+        <activity android:name=".CardviewDetalle"></activity>
     </application>
 
 </manifest>

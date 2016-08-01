@@ -71,7 +71,8 @@
         android:layout_marginTop="91dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:theme="@style/MiBotonRaised"/>
+        android:theme="@style/MiBotonRaised"
+        android:onClick="sendEmail"/>
 
 
 </RelativeLayout>

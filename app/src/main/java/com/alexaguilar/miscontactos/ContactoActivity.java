@@ -22,11 +22,22 @@ public class ContactoActivity extends AppCompatActivity {
     private EditText TextMensaje;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacto);
+
+
+
+        TextMail = (EditText) findViewById(R.id.etCorreo);
+        TextAsunto = (EditText) findViewById(R.id.etNombre);
+        TextMensaje = (EditText) findViewById(R.id.etMensaje);
+
+        buttonEnviar = (Button) findViewById(R.id.btnContacto);
+
+        //Adding click listener
+        //buttonEnviar.setOnClickListener(this);
+
 
         //agrega la toolbar
         Toolbar miActionBar=(Toolbar) findViewById(R.id.miActionBar);
@@ -40,11 +51,7 @@ public class ContactoActivity extends AppCompatActivity {
 
     }
 
-    /*
-    public void fabClicked(View v){
-        Toast.makeText(this, "Subir", Toast.LENGTH_SHORT).show();
-    }
-    */
+
 
     private void sendEmail(View v) {
 
@@ -61,4 +68,11 @@ public class ContactoActivity extends AppCompatActivity {
         //Executing sendmail to send email
         sm.execute();
     }
+
+    /*
+    public void onClick(View v) {
+        sendEmail();
+    }
+    */
+
 }

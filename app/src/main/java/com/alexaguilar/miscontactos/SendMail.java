@@ -33,8 +33,8 @@ public class SendMail extends AsyncTask<Void,Void,Void> {
     private String message;
 
     // Cuenta de correo
-    private String usuario = "downvieri@gmail.com";
-    private String password = "aafsystem1";
+    private String usuario = "cuenta@gmail.com";
+    private String password = "password";
 
     //Progressdialog to show while sending email
     private ProgressDialog progressDialog;

@@ -35,6 +35,14 @@ public class ContactoActivity extends AppCompatActivity {
 
         buttonEnviar = (Button) findViewById(R.id.btnContacto);
 
+   //     assert btnSiguiente != null;
+        buttonEnviar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendEmail();
+            }
+        });
+
         //Adding click listener
         //buttonEnviar.setOnClickListener(this);
 
@@ -52,8 +60,7 @@ public class ContactoActivity extends AppCompatActivity {
     }
 
 
-
-    private void sendEmail(View v) {
+    private void sendEmail() {
 
         Toast.makeText(this, "Email!", Toast.LENGTH_SHORT).show();
 

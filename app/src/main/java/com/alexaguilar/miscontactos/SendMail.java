@@ -32,9 +32,6 @@ public class SendMail extends AsyncTask<Void,Void,Void> {
     private String subject;
     private String message;
 
-    // Cuenta de correo
-    private String usuario = "cuenta@gmail.com";
-    private String password = "password";
 
     //Progressdialog to show while sending email
     private ProgressDialog progressDialog;
@@ -82,7 +79,8 @@ public class SendMail extends AsyncTask<Void,Void,Void> {
                 new javax.mail.Authenticator() {
                     //Authenticating the password
                     protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(usuario, password);
+                        //return new PasswordAuthentication(usuario, password);
+                        return new PasswordAuthentication(Config.EMAIL, Config.PASSWORD);
                     }
                 });
 
@@ -91,7 +89,7 @@ public class SendMail extends AsyncTask<Void,Void,Void> {
             MimeMessage mm = new MimeMessage(session);
 
             //Setting sender address
-            mm.setFrom(new InternetAddress(usuario));
+            mm.setFrom(new InternetAddress(Config.EMAIL));
             //Adding receiver
             mm.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
             //Adding subject

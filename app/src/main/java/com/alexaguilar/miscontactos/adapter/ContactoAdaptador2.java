@@ -78,7 +78,6 @@ public class ContactoAdaptador2 extends RecyclerView.Adapter<ContactoAdaptador2.
         contactoViewHolderholder.imgBoton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Toast.makeText(activity,"Like en "+contacto.getNombre(),Toast.LENGTH_SHORT).show();
             }
         });

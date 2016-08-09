@@ -110,13 +110,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
     public void fabClicked(View v){
         Toast.makeText(this, "Subir", Toast.LENGTH_SHORT).show();
     }

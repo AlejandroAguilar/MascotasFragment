@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alexaguilar.miscontactos.db.ConstructorContacto;
 import com.alexaguilar.miscontactos.pojo.Contacto;
 import com.alexaguilar.miscontactos.DetalleContacto;
 import com.alexaguilar.miscontactos.R;
@@ -50,7 +51,7 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
 
     // asocia cada elemento de la lista con cada view
     @Override
-    public void onBindViewHolder(ContactoViewHolder contactoViewHolderholder, int position) {
+    public void onBindViewHolder(final ContactoViewHolder contactoViewHolderholder, int position) {
         final Contacto contacto = contactos.get(position);
         contactoViewHolderholder.imgFoto.setImageResource(contacto.getFoto());
         contactoViewHolderholder.tvNombreCV.setText(contacto.getNombre());
@@ -78,7 +79,20 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(activity,"Like en "+contacto.getNombre(),Toast.LENGTH_SHORT).show();
+
+                ConstructorContacto constructorContacto = new ConstructorContacto(activity);
+                int idU = constructorContacto.darLikeContacto(contacto);
+
+
+                Toast.makeText(activity,"Like en "+contacto.getNombre() + " !",Toast.LENGTH_SHORT).show();
+
+                Toast.makeText(activity,"id: "+idU ,Toast.LENGTH_SHORT).show();
+
+                int res = constructorContacto.obtenerLikesContacto(contacto);
+
+                contactoViewHolderholder.tvTelenoCV.setText(res + " " + activity.getString(R.string.likes));
+                //Toast.makeText(activity,"Likes: "+ res ,Toast.LENGTH_SHORT).show();
+
             }
         });
 

@@ -66,12 +66,13 @@ public class MascotasFragment extends Fragment {
     public void inicializarListaContactos(){
         contactos = new ArrayList<Contacto>();
 
-        contactos.add(new Contacto(R.drawable.cute_dog,"Lazzy",2));
-        contactos.add(new Contacto(R.drawable.chi, "Perro policia", 1));
-        contactos.add(new Contacto(R.drawable.negro, "Guia", 1));
-        contactos.add(new Contacto(R.drawable.labrador,"Galgo",2));
-        contactos.add(new Contacto(R.drawable.perfil, "Compañia", 3));
-        contactos.add(new Contacto(R.drawable.perro, "Cobrador", 2));
+        contactos.add(new Contacto(R.drawable.cute_dog,"Lazzy",0));
+        contactos.add(new Contacto(R.drawable.chi, "Perro policia", 0));
+        contactos.add(new Contacto(R.drawable.negro, "Guia", 0));
+        contactos.add(new Contacto(R.drawable.labrador,"Galgo",0));
+        contactos.add(new Contacto(R.drawable.perfil, "Compañia", 0));
+        contactos.add(new Contacto(R.drawable.perro, "Cobrador", 0));
+        contactos.add(new Contacto(R.drawable.pastor, "Pastor Aleman", 0));
     }
 
 }

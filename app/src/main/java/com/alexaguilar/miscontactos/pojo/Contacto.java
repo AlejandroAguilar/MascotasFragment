@@ -5,6 +5,7 @@ package com.alexaguilar.miscontactos.pojo;
  */
 public class Contacto {
 
+    private int id;
     private String nombre;
     private String telefono;
     private int foto;
@@ -14,6 +15,10 @@ public class Contacto {
         this.foto = foto;
         this.nombre = nombre;
         this.like = likes;
+    }
+
+    public Contacto() {
+
     }
 
     public int getLike() {
@@ -47,5 +52,13 @@ public class Contacto {
 
     public void setFoto(int foto) {
         this.foto = foto;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
